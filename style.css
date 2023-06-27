@@ -1,0 +1,21 @@
+.pbar {
+    width: 350px;
+    height: 15px;
+    background-color: #7e7e7e;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.pnumb {
+    margin: 20px 0 2px 0;
+}
+
+.line {
+    max-width: 350px;
+    /*width of pbar*/
+    height: 15px;
+    /*height of pbar*/
+    border-radius: 2px;
+    /*Background of the line*/
+    background-image: linear-gradient(to right, #00bd00, #008f00);
+}
