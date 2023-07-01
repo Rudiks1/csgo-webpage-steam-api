@@ -14,13 +14,14 @@ include 'config.php';
 //making the request
 $response = file_get_contents($url);
 $data = json_decode($response, true);
+$server = $data['response']['servers'][0];
 
 //get the needed data out of the response
-$name = $data['response']['servers'][0]['name']; //server name
-$players = $data['response']['servers'][0]['players']; //number of online players
-$maxplayers = $data['response']['servers'][0]['max_players']; //number of maximum players
-$map = $data['response']['servers'][0]['map']; //the map
-$version = $data['response']['servers'][0]['version']; //server version
+$name = $server['name']; //server name
+$players = $server['players']; //number of online players
+$maxplayers = $server['max_players']; //number of maximum players
+$map = $server['map']; //the map
+$version = $server['version']; //server version
 
 //there are a lot more informations in the api response
 ?>
